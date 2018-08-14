@@ -1,7 +1,9 @@
 const notes = require('./notes.js');
 const _ = require('lodash');
 const yargs = require('yargs');
-const js = require('../HelloWord/node_modules/');
+const js = require('fs');
+
+
 
 const argv = yargs.argv;
 var command = process.argv[2];

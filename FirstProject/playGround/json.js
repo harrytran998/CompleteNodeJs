@@ -2,14 +2,17 @@
 // const person = JSON.parse(personJson);
 // console.log(person);
 
-var fs = require('fs');
-var _ = require('lodash')
-var originalNote = {
+const fs = require('fs');
+const originalNote = {
   title : 'Fucking',
-  body : 'Some bodt'
+  body : 'Some body'
 };
-var strNote = JSON.stringify(originalNote);
+
+const strNote = JSON.stringify(originalNote);
 fs.writeFileSync('notes.json', strNote);
-var noteStr = fs.readFileSync('notes.json');
-var  note = JSON.parse(noteStr);
+const noteStr = fs.readFileSync('notes.json');
+const  note = JSON.parse(noteStr);
+for (let i = 0; i < 10;i++){
+  console.log(i);
+}
 console.log(note.title);
